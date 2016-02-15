@@ -1,4 +1,6 @@
-import java.rmi.Remote; 
+package com.ar.common;
+
+import java.rmi.Remote;
 import java.rmi.RemoteException; 
 
 /**
@@ -11,6 +13,7 @@ public interface ISupplier extends Remote {
 	 * @throws RemoteException
 	 */
 	public String question() throws RemoteException;
+
 	/**
 	 * renvoie la valeur de la proptiété de nom s
 	 * @param s le nom de la propriété choisie

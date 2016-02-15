@@ -1,3 +1,5 @@
+package com.ar.client;
+
 import java.rmi.RMISecurityManager;
 
 /**
@@ -26,6 +28,10 @@ public class Client {
 		}	
 		// installation d'un securityManager 
 		// A COMPLETER : INSTALLATION DU SECURITYMANAGER
+		if(System.getSecurityManager() == null){
+			System.setSecurityManager(new SecurityManager());
+		}
+
 		// Démarrage des consommateurs
 		for(int i=0;i<nombre;i++)  {
 			new Customer(host,nom,((int)(Math.random()*num))+1,i).start();
